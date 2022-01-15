@@ -4,17 +4,17 @@ apply plugin: 'io.fabric'
 android {
     signingConfigs {
         config {
-            keyAlias project.KEY_ALIAS
-            keyPassword project.KEY_PASSWORD
-            storeFile file(project.STORE_FILE)
-            storePassword project.STORE_PASSWORD
+//            keyAlias project.KEY_ALIAS
+//            keyPassword project.KEY_PASSWORD
+//            storeFile file(project.STORE_FILE)
+//            storePassword project.STORE_PASSWORD
         }
     }
-    compileSdkVersion 27
+    compileSdkVersion 32
     defaultConfig {
-        applicationId "com.ibrahimyousre.resumebuilder"
+        applicationId "com.crzbld.resumebuilder"
         minSdkVersion 19
-        targetSdkVersion 27
+        targetSdkVersion 32
         versionCode 4
         versionName "1.1.4"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -39,8 +39,11 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
     implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    //noinspection GradleCompatible
     implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    //noinspection GradleCompatible
     implementation "com.android.support:support-v4:$rootProject.supportLibraryVersion"
     implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
 
@@ -56,6 +59,7 @@ dependencies {
 
     implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
     implementation "com.google.firebase:firebase-core:$rootProject.firebaseVersion"
+    //noinspection OutdatedLibrary
     implementation "com.crashlytics.sdk.android:crashlytics:$rootProject.crashlyticsVersion"
 
     testImplementation 'junit:junit:4.12'
